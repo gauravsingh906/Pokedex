@@ -1,32 +1,137 @@
-.pokemon-details-name{
-    font-size: xx-large;
-    color: black;
-    margin-top: 1rem;
-}
+.pokemon-details-wrapper {
 
-.pokemon-details-name span{
-  letter-spacing: 1rem;
-}
-.pokemon-details-types{
-   display: flex;
-   gap: 3rem;
-   margin-top: 2rem;
-   font-size: larger;
-}
-
-.pokemon-details-types div{
-    border: 1px, solid gainsboro;
-    border-radius: 15px;
-    padding: 1rem;
-    background-color: gainsboro;
-}
-.pokemon-details-image{
-    max-height: 200px;
-    margin-top: 2rem;
-}
-.pokemon-details-wrapper{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-   
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+    /* Light background color */
+    border-radius: 10px;
+    /* Rounded corners for the wrapper */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.pokemon-card {
+    display: flex;
+    /* Change to flex for horizontal layout */
+    flex-direction: row;
+    /* Align items in a row */
+    align-items: center;
+    /* Center align items vertically */
+    background: white;
+    /* Card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Card shadow */
+    transition: transform 0.3s ease;
+    /* Smooth scaling effect */
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+    /* Slight scaling on hover */
+}
+
+.pokemon-details-image {
+    max-height: 200px;
+    margin-right: 20px;
+    /* Space between image and details */
+    transition: transform 0.3s ease;
+    /* Smooth transition for scaling */
+}
+
+.pokemon-details-image:hover {
+    transform: scale(1.1);
+    /* Enlarge the image on hover */
+}
+
+.pokemon-details-name {
+    font-size: 2rem;
+    /* Increased font size for better visibility */
+    color: #2c3e50;
+    /* Darker text color */
+    margin: 10px 0;
+    /* Space above and below the name */
+    text-align: left;
+    /* Left-align the name */
+}
+
+.pokemon-details-stats {
+    display: flex;
+    justify-content: space-between;
+    /* Space stats evenly */
+    width: 100%;
+    /* Full width for stats */
+    margin: 10px 0;
+    /* Space around stats */
+    font-size: 1.2rem;
+    /* Slightly larger font for stats */
+    color: #34495e;
+    /* Grayish text color */
+}
+
+.pokemon-details-types {
+    display: flex;
+    gap: 1rem;
+    /* Adjust gap for better spacing */
+    margin-top: 10px;
+    /* Space above types */
+}
+
+.pokemon-type {
+    border: 1px solid gainsboro;
+    border-radius: 15px;
+    padding: 10px;
+    /* Added padding */
+    background-color: gainsboro;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Added transition for scale */
+}
+
+.pokemon-type:hover {
+    background-color: #d3d3d3;
+    transform: scale(1.05);
+    /* Enlarge on hover */
+}
+
+.similar-pokemon {
+    margin-top: 20px;
+    font-size: larger;
+    text-align: center;
+}
+
+.similar-pokemon h2 {
+    margin-bottom: 10px;
+    /* Space below the title */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pokemon-card {
+        flex-direction: column;
+        /* Stack vertically on smaller screens */
+        align-items: center;
+        /* Center-align items */
+    }
+
+    .pokemon-details-name {
+        font-size: 1.5rem;
+        /* Adjust font size for smaller screens */
+    }
+
+    .pokemon-details-image {
+        max-height: 150px;
+        /* Reduce image size on small screens */
+        margin-bottom: 20px;
+        /* Add space below the image */
+    }
+
+    .pokemon-details-stats {
+        flex-direction: column;
+        /* Stack stats vertically */
+        align-items: center;
+        /* Center-align stats */
+    }
 }

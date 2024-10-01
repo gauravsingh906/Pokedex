@@ -1,9 +1,37 @@
-.search-wrapper{
+.search-wrapper {
     margin: 0 auto;
+    text-align: center;
+    /* Center the search box */
 }
 
-#pokemon-name-search{
+.search-input {
     margin-top: 2rem;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
+    /* Limit max width for larger screens */
     padding: 1.5rem;
+    border: 2px solid #3498db;
+    /* Border color */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    /* Smooth transition for border color */
+}
+
+.search-input:focus {
+    border-color: #2ecc71;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove default outline */
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+    /* Add shadow on focus */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-input {
+        padding: 1rem;
+        /* Reduce padding for smaller screens */
+    }
 }

@@ -1,6 +1,85 @@
-.pokedex-wrapper{
+.pokedex-wrapper {
     display: flex;
     flex-direction: column;
-   
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    transition: all 0.3s ease-in-out;
+    /* Smooth transitions */
 }
 
+.pokemon-list,
+.pokemon-details {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+    /* Animation for list and details */
+}
+
+/* Define animation keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #3b4cca;
+    /* Pokemon-themed color */
+}
+
+/* Add hover effects */
+.pokemon-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .pokedex-wrapper {
+        padding: 10px;
+    }
+
+    .search-input {
+        font-size: 14px;
+        max-width: 300px;
+    }
+}
+
+.pokemon-item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .pokedex-wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .search-input {
+        width: 80%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-input {
+        font-size: 14px;
+    }
+}
